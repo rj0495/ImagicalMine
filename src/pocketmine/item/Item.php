@@ -551,8 +551,8 @@ class Item{
 	const POISONOUS_POTATO = 394;
 	const GOLDEN_CARROT = 396;
 	
-	const MOB_HEAD = 397;
-	const SKULL = 397;
+	const HEAD_ITEM = 397;
+	const HEAD_BLOCK = 144;
 
 	const PUMPKIN_PIE = 400;
 	
@@ -987,11 +987,11 @@ class Item{
 		
 		Item::addCreativeItem(Item::get(Item::CAKE, 0));
 		
-		Item::addCreativeItem(Item::get(Item::SKULL, 0)); // Skeleton
-		Item::addCreativeItem(Item::get(Item::SKULL, 1)); // Wither Skeleton
-		Item::addCreativeItem(Item::get(Item::SKULL, 2)); // Zombie
-		Item::addCreativeItem(Item::get(Item::SKULL, 3)); // Head (Steve)
-		Item::addCreativeItem(Item::get(Item::SKULL, 4)); // Creeper
+		Item::addCreativeItem(Item::get(Item::HEAD_BLOCK, 0)); // Skeleton
+		Item::addCreativeItem(Item::get(Item::HEAD_BLOCK, 1)); // Wither Skeleton
+		Item::addCreativeItem(Item::get(Item::HEAD_BLOCK, 2)); // Zombie
+		Item::addCreativeItem(Item::get(Item::HEAD_BLOCK, 3)); // Head (Steve)
+		Item::addCreativeItem(Item::get(Item::HEAD_BLOCK, 4)); // Creeper
 		
 		Item::addCreativeItem(Item::get(Item::SIGN, 0));
 		Item::addCreativeItem(Item::get(Item::FLOWER_POT, 0));
