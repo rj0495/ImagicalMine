@@ -31,7 +31,7 @@ use pocketmine\event\TranslationContainer;
 use pocketmine\Player;
 use pocketmine\utils\TextFormat;
 
-class ExpCommand extends VanillaCommand{
+class XpCommand extends VanillaCommand{
 
 	public function __construct($name){
 		parent::__construct($name, "Gives the specified player a certain amount of experience. Specify <amount>L to give levels instead, with a negative amount resulting in taking levels.", "/xp <amount> [player] OR /xp <amount>L [player]", []);
@@ -69,11 +69,11 @@ class ExpCommand extends VanillaCommand{
 			if($player != null){
 				if($isLevel){
 					if($isTaking){
-						$player->giveExpLevels(-$amount);
+						$player->setLevel($player->getLevel()-$amount);
 						$player->getServer()->broadcastMessage("Taken " . $amount + " level(s) from " . $player->getName(), $player);
 					}
 					else{
-						$player->giveExpLevels($amount);
+						$player->setLevel($amount);
 						$player->getServer()->broadcastMessage("Given " . $amount + " level(s) to " . $player->getName(), $sender);
 					}
 				}
