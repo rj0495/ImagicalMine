@@ -57,15 +57,15 @@ class SnowLayer extends Flowable{
 
 	public function place(Item $item, Block $block, Block $target, $face, $fx, $fy, $fz, Player $player = null){
 		$down = $this->getSide(0);
-		if($down->isSolid()){
-			if($down->getId() === $this->getId() && $down->getDamage() <= 7){
+		if($down->getId() === $this->getId() && $down->isSolid()){
+			if($down->getDamage() <= 7){
 				$down->setDamage($down->getDamage() + 1);
 				$this->getLevel()->setBlock($down, $down, true);
 				
 				return true;
 			}
 			else{
-				$this->getLevel()->setBlock($block, new Snow(), true);
+				$this->getLevel()->setBlock($down, new Snow(), true);
 				
 				return true;
 			}
